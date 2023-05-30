@@ -1,0 +1,7 @@
+{% for object in object_list %}
+    {{object.name}}:
+    <br/>
+    {% for detail in object.child_set.all %}
+        {{detail.name}}-
+    {% endfor %}
+{% endfor %}
